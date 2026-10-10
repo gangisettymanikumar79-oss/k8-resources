@@ -10,3 +10,4 @@ spec:
   containers:
   - name: nginx # container name
     image: nginx # by default it will get from docker hub
+    
