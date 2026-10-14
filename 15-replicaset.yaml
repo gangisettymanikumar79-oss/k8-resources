@@ -23,4 +23,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:trixie-otel
+        image: nginx:1.30.5-trixie-perl
