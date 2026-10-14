@@ -8,7 +8,7 @@ metadata:
     component: frontend
     purpose: deployment
 spec:
-  replicas: 10
+  replicas: 9
   selector:
     matchLabels:
       project: roboshop
