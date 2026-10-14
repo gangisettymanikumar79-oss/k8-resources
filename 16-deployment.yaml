@@ -15,7 +15,7 @@ spec:
       tier: frontend
       component: frontend
       purpose: deployment
-template:
+  template:
     metadata:
       labels:
         project: roboshop
