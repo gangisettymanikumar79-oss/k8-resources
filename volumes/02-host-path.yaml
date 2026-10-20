@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: fluentd-elasticsearch
-  namespace: kube-system
+  namespace: kube-system # admin namespace
   labels:
     k8s-app: fluentd-logging
 spec:
@@ -27,10 +27,8 @@ spec:
         - name: varlog
           mountPath: /var/log
           readOnly: true
-    volumes:
-    - name: varlog
+      volumes:
+      - name: varlog
       # underlying host where pod is scheduled
-      hostPath:
-        path: /var/log
-        
-        
+        hostPath:
+          path: /var/log
