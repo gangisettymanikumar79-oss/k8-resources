@@ -32,5 +32,6 @@ spec:
       # underlying host where pod is scheduled
         hostPath:
           path: /var/log
+          
         
         
