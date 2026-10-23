@@ -8,11 +8,12 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
-  storageClassName: efs-static
+  storageClassName: "" # for static provisioning sc should be empty
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-0d7e68f0e4bf95c21
+    volumeHandle: efs:fs-0d7e68f0e4bf95c21
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
