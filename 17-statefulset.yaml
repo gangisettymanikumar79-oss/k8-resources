@@ -22,13 +22,11 @@ spec:
       app: nginx # has to match .spec.template.metadata.labels
   serviceName: "nginx"
   replicas: 3 # by default is 1
-  
   template:
     metadata:
       labels:
         app: nginx # has to match .spec.selector.matchLabels
     spec:
-      
       containers:
       - name: nginx
         image: nginx
@@ -38,6 +36,7 @@ spec:
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
+  #pvc
   volumeClaimTemplates:
   - metadata:
       name: www
@@ -47,4 +46,5 @@ spec:
       resources:
         requests:
           storage: 1Gi
-          
+      
+      
